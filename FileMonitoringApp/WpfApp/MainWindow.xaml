@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="File Monitoring App" Height="505" Width="1021">
+    <Grid>
+        <!-- ItemsSource, DataContext olarak atanan MainViewModel'in 'Trades' özelliğine bağlanır. -->
+        <DataGrid ItemsSource="{Binding Trades}" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=d}" />
+                <DataGridTextColumn Header="Open" Binding="{Binding Open}" />
+                <DataGridTextColumn Header="High" Binding="{Binding High}" />
+                <DataGridTextColumn Header="Low" Binding="{Binding Low}" />
+                <DataGridTextColumn Header="Close" Binding="{Binding Close}" />
+                <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
